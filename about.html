@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Polaris S.A.</title>
+<meta name="description" content="Polaris S.A. is a Paraguay-registered Sociedad Anónima founded by professionals with backgrounds in finance, technology, and international business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about-grid p { color: var(--text-muted); font-size: 1rem; line-height: 1.85; font-weight: 300; margin-bottom: 1.25rem; }
+  .entity-card { border: 1px solid var(--border); padding: 2.5rem; position: relative; background: var(--navy2); }
+  .entity-card::before { content: ''; position: absolute; top: -1px; left: 2rem; right: 2rem; height: 2px; background: var(--gold); }
+  .entity-row { display: flex; justify-content: space-between; align-items: flex-start; font-size: 0.82rem; padding: 1rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+  .entity-row:first-child { padding-top: 0; }
+  .entity-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .entity-key { letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-size: 0.68rem; flex-shrink: 0; padding-top: 2px; }
+  .entity-val { color: var(--cream); text-align: right; line-height: 1.5; }
+  .values-section { background: var(--navy2); border-top: 1px solid var(--border); }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .value-item { padding: 2rem; border: 1px solid var(--border); }
+  .value-item h4 { font-family: var(--serif); font-size: 1.2rem; color: var(--cream); margin-bottom: 0.75rem; }
+  .value-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; font-weight: 300; }
+  .value-num { font-family: var(--serif); font-size: 2.5rem; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+  .pillars-strip { border-top: 1px solid var(--border); }
+  .pillars-strip-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5px; background: var(--border); margin-top: 3rem; }
+  .pillar-mini { background: var(--navy2); padding: 2rem; text-decoration: none; display: block; transition: background 0.2s; }
+  .pillar-mini:hover { background: var(--navy3); }
+  .pillar-mini h4 { font-family: var(--serif); font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem; }
+  .pillar-mini p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .pillar-mini .arrow { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: 1rem; display: block; }
+  @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } .pillars-strip-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.5,8.5 23,9.5 17.5,14.8 19,22 12,18.5 5,22 6.5,14.8 1,9.5 8.5,8.5"/></svg>
+    Polaris S.A.
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="trade.html">Trade</a></li>
+    <li><a href="investments.html">Investments</a></li>
+    <li><a href="inkubeitor.html">Inkubeitor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <p class="section-label">About Polaris</p>
+    <h1>Operators in Paraguay,<br><em>connected to Europe</em></h1>
+    <p>We are not a broker or an intermediary. Polaris S.A. is the legal entity that executes — registered, authorised, and based in Asunción.</p>
+  </div>
+</div>
+
+<section>
+  <div class="about-grid">
+    <div>
+      <p class="section-label">Our story</p>
+      <h2>Built from the<br><em>ground up</em></h2>
+      <p>Polaris S.A. was founded by professionals with backgrounds in finance, enterprise technology, and international business. Having lived and worked between Europe and Paraguay, we saw a clear gap: European capital and commercial interest in South America had no reliable, professionally run local counterpart.</p>
+      <p>We built Polaris to be that counterpart. A single, legally registered Sociedad Anónima in Paraguay that can import, export, invest, and build companies — without layers of intermediaries or offshore complexity.</p>
+      <p>Paraguay offers one of the most competitive environments in the world for business and investment: a flat 10% income tax, zero wealth tax, zero inheritance tax, strong property rights, and a dollarised real estate market. We help European partners access this environment with full legal clarity and local expertise.</p>
+      <p>We are based in Asunción. We know the market, the regulations, and the people. That is our edge.</p>
+      <a href="contact.html" class="btn-primary" style="margin-top:1rem">Get in touch</a>
+    </div>
+    <div>
+      <div class="entity-card">
+        <div class="entity-row">
+          <span class="entity-key">Legal name</span>
+          <span class="entity-val">Polaris S.A.</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">Entity type</span>
+          <span class="entity-val">Sociedad Anónima</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">Registered in</span>
+          <span class="entity-val">Republic of Paraguay</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">RUC</span>
+          <span class="entity-val">80078960-1</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">Operations</span>
+          <span class="entity-val">Import · Export<br>Investment · Venture building</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">European focus</span>
+          <span class="entity-val">DACH · Benelux · Spain</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">Contact</span>
+          <span class="entity-val">investpy@gmail.com</span>
+        </div>
+        <div class="entity-row">
+          <span class="entity-key">Website</span>
+          <span class="entity-val">polaris-paraguay.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <p class="section-label">What we stand for</p>
+  <h2>Three principles,<br><em>no exceptions</em></h2>
+  <div class="values-grid">
+    <div class="value-item">
+      <div class="value-num">01</div>
+      <h4>Transparency</h4>
+      <p>We operate under Paraguayan law, with full documentation, registered entities, and clear fee structures. No hidden layers, no offshore opacity.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-num">02</div>
+      <h4>Local presence</h4>
+      <p>We are on the ground in Asunción. Every deal, every import, every investment is managed by people who live and work in Paraguay — not remote advisors.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-num">03</div>
+      <h4>Long-term thinking</h4>
+      <p>We are building a business that lasts. Our reputation in both Europe and Paraguay depends on every transaction going right. We have skin in the game.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillars-strip">
+  <p class="section-label">What we do</p>
+  <h2>Three pillars,<br><em>one entity</em></h2>
+  <div class="pillars-strip-grid">
+    <a href="trade.html" class="pillar-mini">
+      <h4>Polaris Trade</h4>
+      <p>Import and export operations between Europe and South America, managed end-to-end through our registered entity.</p>
+      <span class="arrow">Trade services →</span>
+    </a>
+    <a href="investments.html" class="pillar-mini">
+      <h4>Paraguay Invest</h4>
+      <p>Real estate and private investment opportunities in Paraguay for European investors seeking yield and diversification.</p>
+      <span class="arrow">Investment opportunities →</span>
+    </a>
+    <a href="inkubeitor.html" class="pillar-mini">
+      <h4>Inkubeitor</h4>
+      <p>A venture studio building technology companies in Paraguay. Portfolio includes Prestamena, Infinita, and Negociable.</p>
+      <span class="arrow">Our ventures →</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-brand">★ Polaris S.A.</div>
+    <div class="footer-legal">
+      Polaris S.A. · Sociedad Anónima · Republic of Paraguay · RUC 80078960-1<br>
+      polaris-paraguay.com · investpy@gmail.com
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="trade.html">Trade</a>
+    <a href="investments.html">Investments</a>
+    <a href="inkubeitor.html">Inkubeitor</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-disclaimer">The information on this website is provided for informational purposes only and does not constitute a financial offering, investment advice, or solicitation. Polaris S.A. is a commercially registered entity in the Republic of Paraguay (RUC 80078960-1) and is not a regulated financial institution.</p>
+</footer>
+
+</body>
+</html>

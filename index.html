@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polaris S.A. — Trade, Investment & Innovation</title>
+<meta name="description" content="Polaris S.A. is a Paraguay-registered company connecting Europe and South America through trade, investment, and innovation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1520;
+    --navy2: #131e2e;
+    --navy3: #1a2740;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f5f0e8;
+    --cream2: #ede8de;
+    --text: #f0ece4;
+    --text-muted: #8a9ab0;
+    --border: rgba(201,168,76,0.18);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--navy);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(13,21,32,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .nav-logo svg { width: 22px; height: 22px; }
+  .nav-links {
+    display: flex; align-items: center; gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    padding: 8rem 3rem 5rem;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,39,64,0.9) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      linear-gradient(160deg, #0d1520 0%, #111c2c 50%, #0d1520 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(var(--gold) 1px, transparent 1px),
+      linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-star {
+    position: absolute; right: 8%; top: 20%;
+    width: 380px; height: 380px;
+    opacity: 0.04;
+    animation: rotate 80s linear infinite;
+  }
+  @keyframes rotate { to { transform: rotate(360deg); } }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 680px;
+    animation: fadeUp 1s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.75rem;
+    color: var(--cream);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--cream);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-stats {
+    position: absolute; right: 3rem; bottom: 4rem;
+    display: flex; flex-direction: column; gap: 1.5rem;
+    z-index: 2;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+  .stat {
+    text-align: right;
+    border-right: 2px solid var(--gold);
+    padding-right: 1.25rem;
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 6rem 3rem; }
+  .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    display: block; width: 24px; height: 1px;
+    background: var(--gold);
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  h2 em { font-style: italic; color: var(--gold); }
+
+  /* PILLARS */
+  .pillars { background: var(--navy2); }
+  .pillars-intro {
+    max-width: 600px;
+    margin-bottom: 4rem;
+  }
+  .pillars-intro p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .pillar {
+    background: var(--navy2);
+    padding: 2.5rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .pillar:hover { background: var(--navy3); }
+  .pillar:hover::before { transform: scaleX(1); }
+  .pillar-num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    transition: color 0.25s;
+  }
+  .pillar:hover .pillar-num { color: rgba(201,168,76,0.2); }
+  .pillar h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+  .pillar p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  .pillar-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .pillar-link svg { transition: transform 0.2s; }
+  .pillar:hover .pillar-link svg { transform: translateX(4px); }
+
+  /* ABOUT STRIP */
+  .about-strip {
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-strip p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.85;
+    font-weight: 300;
+    margin-top: 1.25rem;
+  }
+  .about-strip p + p { margin-top: 1rem; }
+  .about-visual {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+  }
+  .about-visual::before {
+    content: '';
+    position: absolute; top: -1px; left: 2rem; right: 2rem;
+    height: 2px; background: var(--gold);
+  }
+  .entity-detail {
+    display: flex; flex-direction: column; gap: 1.25rem;
+  }
+  .entity-row {
+    display: flex; justify-content: space-between;
+    font-size: 0.82rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .entity-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .entity-key {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+  .entity-val { color: var(--cream); text-align: right; }
+
+  /* CONTACT CTA */
+  .contact-cta {
+    background: var(--navy2);
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  .contact-cta h2 { margin-bottom: 0.75rem; }
+  .contact-cta p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #08101a;
+    padding: 2.5rem 3rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .footer-legal {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .footer-links {
+    display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end;
+  }
+  .footer-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-disclaimer {
+    width: 100%;
+    font-size: 0.68rem;
+    color: rgba(138,154,176,0.5);
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+    line-height: 1.7;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero-stats { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .about-strip { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; }
+    .footer-links { align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <polygon points="12,2 15.5,8.5 23,9.5 17.5,14.8 19,22 12,18.5 5,22 6.5,14.8 1,9.5 8.5,8.5"/>
+    </svg>
+    Polaris S.A.
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trade.html">Trade</a></li>
+    <li><a href="investments.html">Investments</a></li>
+    <li><a href="inkubeitor.html">Inkubeitor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <!-- Decorative star -->
+  <svg class="hero-star" viewBox="0 0 200 200" fill="none" stroke="#c9a84c">
+    <polygon points="100,5 120,75 195,75 135,120 155,190 100,150 45,190 65,120 5,75 80,75"/>
+    <polygon points="100,25 115,70 162,70 124,97 138,143 100,118 62,143 76,97 38,70 85,70" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="90" stroke-width="0.3"/>
+    <circle cx="100" cy="100" r="70" stroke-width="0.3"/>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Asunción, Paraguay · Est. 2024</p>
+    <h1>Trade, investment<br>&amp; <em>innovation</em><br>between continents</h1>
+    <p class="hero-sub">Polaris S.A. is a Paraguay-registered company connecting European partners with the opportunities of South America — through trade, real estate investment, and venture building.</p>
+    <div class="hero-actions">
+      <a href="about.html" class="btn-primary">About Polaris</a>
+      <a href="contact.html" class="btn-secondary">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">10%</div>
+      <div class="stat-label">Flat income tax<br>in Paraguay</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Business<br>pillars</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">EU</div>
+      <div class="stat-label">Partners &amp;<br>investors</div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars">
+  <div class="pillars-intro">
+    <p class="section-label">What we do</p>
+    <h2>Three pillars,<br>one <em>operating entity</em></h2>
+    <p>All activity runs through Polaris S.A., a legally registered Sociedad Anónima in Paraguay with import, export, investment, and commercial authorisation. No intermediaries. No shell structures.</p>
+  </div>
+
+  <div class="pillars-grid">
+    <a href="trade.html" class="pillar">
+      <div class="pillar-num">01</div>
+      <h3>Polaris Trade</h3>
+      <p>Import and export operations between Europe and South America. We source, clear, and distribute goods across borders with a focus on reliability and compliance.</p>
+      <span class="pillar-link">
+        Trade services
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <a href="investments.html" class="pillar">
+      <div class="pillar-num">02</div>
+      <h3>Paraguay Invest</h3>
+      <p>Real estate and private investment opportunities in Paraguay for European investors. We identify, structure, and manage investments with full local expertise.</p>
+      <span class="pillar-link">
+        Investment opportunities
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <a href="inkubeitor.html" class="pillar">
+      <div class="pillar-num">03</div>
+      <h3>Inkubeitor</h3>
+      <p>A venture studio building technology companies in Paraguay and the region. Portfolio includes Prestamena, Infinita Soluciones Informáticas, and Negociable.</p>
+      <span class="pillar-link">
+        Our ventures
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip">
+  <div>
+    <p class="section-label">About us</p>
+    <h2>Operators in<br><em>Paraguay</em>,<br>connected to Europe</h2>
+    <p>Polaris S.A. was founded by professionals with backgrounds in finance, technology, and international business. We are based in Asunción and operate directly — not as a broker or intermediary, but as the legal entity that executes.</p>
+    <p>Paraguay offers one of the most competitive tax environments in the world: a flat 10% income tax, zero wealth tax, zero inheritance tax, and no capital gains tax on most assets. We help European partners access this environment with full legal clarity.</p>
+    <a href="about.html" class="btn-secondary" style="margin-top:2rem; display:inline-block;">Read our story</a>
+  </div>
+
+  <div class="about-visual">
+    <div class="entity-detail">
+      <div class="entity-row">
+        <span class="entity-key">Legal name</span>
+        <span class="entity-val">Polaris S.A.</span>
+      </div>
+      <div class="entity-row">
+        <span class="entity-key">Entity type</span>
+        <span class="entity-val">Sociedad Anónima</span>
+      </div>
+      <div class="entity-row">
+        <span class="entity-key">Registered in</span>
+        <span class="entity-val">Republic of Paraguay</span>
+      </div>
+      <div class="entity-row">
+        <span class="entity-key">Operations</span>
+        <span class="entity-val">Import · Export · Investment · Ventures</span>
+      </div>
+      <div class="entity-row">
+        <span class="entity-key">European focus</span>
+        <span class="entity-val">DACH · Benelux · Spain</span>
+      </div>
+      <div class="entity-row">
+        <span class="entity-key">Website</span>
+        <span class="entity-val">polaris-paraguay.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-cta">
+  <p class="section-label" style="justify-content:center; margin-bottom:1.5rem;">Work with us</p>
+  <h2>Ready to explore<br><em>Paraguay</em>?</h2>
+  <p>Whether you are a trade partner, an investor, or a startup founder — we are the ground team you need in South America.</p>
+  <a href="contact.html" class="btn-primary">Get in touch</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">★ Polaris S.A.</div>
+    <div class="footer-legal">
+      Polaris S.A. · Sociedad Anónima · Republic of Paraguay<br>
+      polaris-paraguay.com · contact@polaris-paraguay.com
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="trade.html">Trade</a>
+    <a href="investments.html">Investments</a>
+    <a href="inkubeitor.html">Inkubeitor</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-disclaimer">
+    The information on this website is provided for informational purposes only and does not constitute a financial offering, investment advice, or solicitation. Investment information is subject to applicable laws and regulations. Polaris S.A. is a commercially registered entity in the Republic of Paraguay and is not a regulated financial institution.
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade — Polaris S.A.</title>
+<meta name="description" content="Polaris Trade handles import and export operations between Europe and South America through our legally registered entity in Paraguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .trade-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border); margin-top: 3rem; }
+  .trade-col { background: var(--navy2); padding: 3rem; }
+  .trade-col h3 { margin-bottom: 1.5rem; }
+  .trade-col .direction-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; display: block; }
+  .category-list { list-style: none; margin-top: 1rem; }
+  .category-list li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); font-weight: 300; line-height: 1.5; }
+  .category-list li:last-child { border-bottom: none; }
+  .category-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+  .how-section { background: var(--navy2); border-top: 1px solid var(--border); }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 3rem; border: 1px solid var(--border); }
+  .step { padding: 2rem; border-right: 1px solid var(--border); position: relative; }
+  .step:last-child { border-right: none; }
+  .step-num { font-family: var(--serif); font-size: 3rem; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+  .step h4 { font-family: var(--serif); font-size: 1.1rem; color: var(--cream); margin-bottom: 0.5rem; }
+  .step p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .why-section { border-top: 1px solid var(--border); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .why-card { border: 1px solid var(--border); padding: 1.75rem; }
+  .why-card h4 { font-family: var(--serif); font-size: 1.1rem; color: var(--cream); margin-bottom: 0.6rem; }
+  .why-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+  .cta-section { background: var(--navy2); border-top: 1px solid var(--border); text-align: center; }
+  .cta-section p { color: var(--text-muted); max-width: 480px; margin: 1rem auto 2rem; font-weight: 300; }
+  @media (max-width: 768px) { .trade-split { grid-template-columns: 1fr; } .steps-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.5,8.5 23,9.5 17.5,14.8 19,22 12,18.5 5,22 6.5,14.8 1,9.5 8.5,8.5"/></svg>
+    Polaris S.A.
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trade.html" class="active">Trade</a></li>
+    <li><a href="investments.html">Investments</a></li>
+    <li><a href="inkubeitor.html">Inkubeitor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <p class="section-label">Polaris Trade</p>
+    <h1>Import &amp; export<br><em>between Europe<br>and South America</em></h1>
+    <p>We handle cross-border trade through our registered Paraguayan entity — from sourcing and compliance to customs clearance and delivery.</p>
+  </div>
+</div>
+
+<section>
+  <p class="section-label">What we trade</p>
+  <h2>Import and export<br><em>services</em></h2>
+  <div class="trade-split">
+    <div class="trade-col">
+      <span class="direction-label">Europe → Paraguay</span>
+      <h3>Import into Paraguay</h3>
+      <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.75;font-weight:300;">We source and import goods from European manufacturers and suppliers into Paraguay. We manage the full logistics chain: supplier negotiation, documentation, customs clearance, and final delivery.</p>
+      <ul class="category-list">
+        <li>Industrial equipment and machinery</li>
+        <li>Consumer goods and branded products</li>
+        <li>Technology and electronics</li>
+        <li>Food and beverage products</li>
+        <li>Chemical and pharmaceutical inputs</li>
+        <li>Construction materials and hardware</li>
+      </ul>
+    </div>
+    <div class="trade-col">
+      <span class="direction-label">Paraguay → Europe &amp; world</span>
+      <h3>Export from Paraguay</h3>
+      <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.75;font-weight:300;">Paraguay produces high-quality agricultural and industrial goods with strong export potential. We connect Paraguayan producers with European buyers and manage compliance, certification, and logistics.</p>
+      <ul class="category-list">
+        <li>Agricultural products — soy, corn, wheat</li>
+        <li>Beef and livestock products</li>
+        <li>Timber and wood products</li>
+        <li>Sesame and specialty crops</li>
+        <li>Leather and raw materials</li>
+        <li>Manufactured goods and components</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <p class="section-label">How it works</p>
+  <h2>From first contact<br>to <em>delivery</em></h2>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h4>Consultation</h4>
+      <p>We understand your product, target market, volumes, and compliance requirements. No obligation, no cost.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h4>Sourcing &amp; quoting</h4>
+      <p>We identify the right suppliers or buyers, obtain quotes, and present a clear commercial proposal.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h4>Documentation</h4>
+      <p>Polaris S.A. handles all export/import documentation, customs classification, and regulatory compliance in Paraguay.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h4>Logistics &amp; delivery</h4>
+      <p>We coordinate freight, insurance, and last-mile delivery. You receive the goods — or your payment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <p class="section-label">Why Paraguay</p>
+  <h2>A strategic hub for<br><em>South American trade</em></h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <h4>Central location</h4>
+      <p>Paraguay borders Brazil, Argentina, and Bolivia — the three largest economies in South America. It is a natural distribution hub for the continent.</p>
+    </div>
+    <div class="why-card">
+      <h4>Low import tariffs</h4>
+      <p>Paraguay applies some of the lowest import duties in the region. The country is a member of MERCOSUR, providing preferential access to the broader South American market.</p>
+    </div>
+    <div class="why-card">
+      <h4>Registered entity on the ground</h4>
+      <p>Polaris S.A. is a legally registered Sociedad Anónima (RUC 80078960-1) with full import and export authorisation in Paraguay. No intermediaries required.</p>
+    </div>
+    <div class="why-card">
+      <h4>Competitive costs</h4>
+      <p>Labour, logistics, and operational costs in Paraguay are significantly lower than in Brazil or Argentina, making it an attractive base for regional trade operations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <p class="section-label" style="justify-content:center;margin-bottom:1.5rem;">Start a conversation</p>
+  <h2>Have a product or<br><em>trade opportunity?</em></h2>
+  <p>Tell us what you are looking to import or export. We will respond within 48 hours with a preliminary assessment.</p>
+  <a href="contact.html" class="btn-primary">Contact Polaris Trade</a>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-brand">★ Polaris S.A.</div>
+    <div class="footer-legal">
+      Polaris S.A. · Sociedad Anónima · Republic of Paraguay · RUC 80078960-1<br>
+      polaris-paraguay.com · investpy@gmail.com
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="trade.html">Trade</a>
+    <a href="investments.html">Investments</a>
+    <a href="inkubeitor.html">Inkubeitor</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-disclaimer">The information on this website is provided for informational purposes only. Polaris S.A. is a commercially registered entity in the Republic of Paraguay (RUC 80078960-1).</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investments — Polaris S.A.</title>
+<meta name="description" content="Paraguay Invest by Polaris S.A. — real estate and private investment opportunities in Paraguay for European investors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .inv-brand { font-family: var(--serif); font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--border); display: inline-block; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--border); margin-top: 3rem; }
+  .stat-block { background: var(--navy2); padding: 2rem; text-align: center; }
+  .stat-block .num { font-family: var(--serif); font-size: 2.5rem; color: var(--cream); line-height: 1; }
+  .stat-block .lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.5; }
+  .invest-types { border-top: 1px solid var(--border); }
+  .invest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .invest-card { border: 1px solid var(--border); padding: 2.5rem; background: var(--navy2); position: relative; overflow: hidden; transition: border-color 0.2s; }
+  .invest-card:hover { border-color: var(--gold); }
+  .invest-card .tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+  .invest-card h3 { margin-bottom: 1rem; }
+  .invest-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; font-weight: 300; margin-bottom: 1.25rem; }
+  .invest-card .detail-row { display: flex; justify-content: space-between; font-size: 0.78rem; padding: 0.6rem 0; border-top: 1px solid var(--border); }
+  .invest-card .detail-key { color: var(--text-muted); }
+  .invest-card .detail-val { color: var(--cream); font-weight: 500; }
+  .why-section { background: var(--navy2); border-top: 1px solid var(--border); }
+  .why-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .tax-list { margin-top: 2rem; }
+  .tax-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+  .tax-item:last-child { border-bottom: none; }
+  .tax-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 300; }
+  .tax-val { font-family: var(--serif); font-size: 1.4rem; color: var(--cream); }
+  .tax-val.zero { color: var(--gold); }
+  .process-section { border-top: 1px solid var(--border); }
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 0; border: 1px solid var(--border); margin-top: 3rem; }
+  .p-step { padding: 2rem; border-right: 1px solid var(--border); }
+  .p-step:last-child { border-right: none; }
+  .p-step .n { font-family: var(--serif); font-size: 2.5rem; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+  .p-step h4 { font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.5rem; }
+  .p-step p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .cta-section { background: var(--navy2); border-top: 1px solid var(--border); text-align: center; }
+  .cta-section p { color: var(--text-muted); max-width: 480px; margin: 1rem auto 2rem; font-weight: 300; }
+  .disclaimer { margin-top: 2rem; font-size: 0.72rem; color: rgba(138,154,176,0.6); max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  @media (max-width: 768px) { .stats-row { grid-template-columns: 1fr 1fr; } .invest-grid { grid-template-columns: 1fr; } .why-cols { grid-template-columns: 1fr; gap: 3rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.5,8.5 23,9.5 17.5,14.8 19,22 12,18.5 5,22 6.5,14.8 1,9.5 8.5,8.5"/></svg>
+    Polaris S.A.
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trade.html">Trade</a></li>
+    <li><a href="investments.html" class="active">Investments</a></li>
+    <li><a href="inkubeitor.html">Inkubeitor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="inv-brand">Paraguay Invest · by Polaris S.A.</div>
+    <h1>Invest in one of<br>South America's most<br><em>stable economies</em></h1>
+    <p>Real estate and private investment opportunities in Paraguay for European investors seeking yield, diversification, and a favourable tax environment.</p>
+    <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-primary">Request a consultation</a>
+      <a href="https://paraguayinvest.co" target="_blank" class="btn-secondary">Visit ParaguayInvest.co →</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <p class="section-label">Paraguay at a glance</p>
+  <h2>Why investors are<br><em>looking south</em></h2>
+  <div class="stats-row">
+    <div class="stat-block">
+      <div class="num">10%</div>
+      <div class="lbl">Flat income<br>tax rate</div>
+    </div>
+    <div class="stat-block">
+      <div class="num">0%</div>
+      <div class="lbl">Wealth &amp;<br>inheritance tax</div>
+    </div>
+    <div class="stat-block">
+      <div class="num">USD</div>
+      <div class="lbl">Denominated<br>property market</div>
+    </div>
+    <div class="stat-block">
+      <div class="num">4–5%</div>
+      <div class="lbl">Historical GDP<br>growth p.a.</div>
+    </div>
+  </div>
+</section>
+
+<section class="invest-types">
+  <p class="section-label">Investment categories</p>
+  <h2>Two ways to<br><em>invest in Paraguay</em></h2>
+  <div class="invest-grid">
+    <div class="invest-card">
+      <span class="tag">Category 01</span>
+      <h3>Real Estate</h3>
+      <p>Paraguay's property market is USD-denominated, legally secure for foreign buyers, and offers rental yields that significantly outperform European markets. Asunción is undergoing rapid urban development, creating opportunities in both residential and commercial property.</p>
+      <p>Polaris S.A. identifies properties, conducts due diligence, manages the purchase process through the Registro Público, and can arrange ongoing rental management.</p>
+      <div class="detail-row"><span class="detail-key">Estimated rental yield</span><span class="detail-val">6–9% p.a.</span></div>
+      <div class="detail-row"><span class="detail-key">Currency</span><span class="detail-val">USD-denominated</span></div>
+      <div class="detail-row"><span class="detail-key">Minimum entry</span><span class="detail-val">From USD 60,000</span></div>
+      <div class="detail-row"><span class="detail-key">Foreign ownership</span><span class="detail-val">Fully permitted</span></div>
+    </div>
+    <div class="invest-card">
+      <span class="tag">Category 02</span>
+      <h3>Private Investment</h3>
+      <p>Beyond real estate, Paraguay offers private investment opportunities in agriculture, fixed income instruments, and early-stage businesses. These are structured on a case-by-case basis, with full documentation and clear return structures.</p>
+      <p>We work with investors to identify the right opportunity for their risk profile and return expectations — from stable fixed income to higher-growth private equity positions.</p>
+      <div class="detail-row"><span class="detail-key">Types</span><span class="detail-val">Agriculture · Bonds · Private equity</span></div>
+      <div class="detail-row"><span class="detail-key">Returns</span><span class="detail-val">Structured per opportunity</span></div>
+      <div class="detail-row"><span class="detail-key">Horizon</span><span class="detail-val">1–5 years typical</span></div>
+      <div class="detail-row"><span class="detail-key">Structure</span><span class="detail-val">Via Polaris S.A.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="why-cols">
+    <div>
+      <p class="section-label">Tax environment</p>
+      <h2>One of the world's most<br><em>competitive</em> tax regimes</h2>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;font-weight:300;margin-top:1rem;">Paraguay operates a territorial tax system — income earned outside Paraguay is not taxed. The domestic tax rates are among the lowest in the world, and there is no wealth, inheritance, or capital gains tax on most assets.</p>
+      <div class="tax-list">
+        <div class="tax-item"><span class="tax-label">Income tax (flat)</span><span class="tax-val">10%</span></div>
+        <div class="tax-item"><span class="tax-label">Wealth tax</span><span class="tax-val zero">0%</span></div>
+        <div class="tax-item"><span class="tax-label">Inheritance tax</span><span class="tax-val zero">0%</span></div>
+        <div class="tax-item"><span class="tax-label">Capital gains (real estate)</span><span class="tax-val">Low / structured</span></div>
+        <div class="tax-item"><span class="tax-label">Foreign income tax</span><span class="tax-val zero">0%</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="section-label">Legal framework</p>
+      <h2>Secure property rights<br><em>for foreign buyers</em></h2>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;font-weight:300;margin-top:1rem;">Paraguay's constitution guarantees private property rights and permits foreign nationals to own property and businesses under the same conditions as Paraguayan citizens. All real estate transactions are registered through the Registro Público de la Propiedad, providing full legal title.</p>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;font-weight:300;margin-top:1rem;">The Paraguayan guaraní is freely convertible. There are no restrictions on transferring capital in or out of the country, making it straightforward for European investors to repatriate returns.</p>
+      <a href="contact.html" class="btn-secondary" style="margin-top:2rem;display:inline-block;">Ask us a question</a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section">
+  <p class="section-label">How to invest</p>
+  <h2>A clear process,<br><em>from first call to closing</em></h2>
+  <div class="process-steps">
+    <div class="p-step">
+      <div class="n">01</div>
+      <h4>Free consultation</h4>
+      <p>We discuss your objectives, risk appetite, and budget. No obligation, no cost.</p>
+    </div>
+    <div class="p-step">
+      <div class="n">02</div>
+      <h4>Opportunity selection</h4>
+      <p>We present suitable opportunities with full details — location, price, yield projections, legal status.</p>
+    </div>
+    <div class="p-step">
+      <div class="n">03</div>
+      <h4>Due diligence</h4>
+      <p>We conduct legal and financial due diligence in Paraguay. You receive a full report before committing.</p>
+    </div>
+    <div class="p-step">
+      <div class="n">04</div>
+      <h4>Purchase &amp; registration</h4>
+      <p>The transaction is executed through a Paraguayan notaría pública and registered in the Registro Público.</p>
+    </div>
+    <div class="p-step">
+      <div class="n">05</div>
+      <h4>Ongoing management</h4>
+      <p>We can arrange rental management, reporting, and eventual exit — keeping you informed from Europe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <p class="section-label" style="justify-content:center;margin-bottom:1.5rem;">Get started</p>
+  <h2>Ready to explore<br><em>Paraguay?</em></h2>
+  <p>Book a free 30-minute consultation. We will walk you through the current opportunities and answer your questions honestly.</p>
+  <a href="contact.html" class="btn-primary">Request a consultation</a>
+  <p class="disclaimer">Investment information is provided for informational purposes only and does not constitute a financial offering or regulated investment advice. Past yield estimates are not a guarantee of future returns. Please consult your own financial and legal advisors before making investment decisions.</p>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-brand">★ Polaris S.A.</div>
+    <div class="footer-legal">
+      Polaris S.A. · Sociedad Anónima · Republic of Paraguay · RUC 80078960-1<br>
+      polaris-paraguay.com · investpy@gmail.com
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="trade.html">Trade</a>
+    <a href="investments.html">Investments</a>
+    <a href="inkubeitor.html">Inkubeitor</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-disclaimer">Investment information is provided for informational purposes only and does not constitute a financial offering, investment advice, or solicitation. Polaris S.A. is a commercially registered entity in the Republic of Paraguay (RUC 80078960-1) and is not a regulated financial institution.</p>
+</footer>
+
+</body>
+</html>
